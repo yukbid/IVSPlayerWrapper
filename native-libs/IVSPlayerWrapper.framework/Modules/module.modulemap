@@ -1,0 +1,11 @@
+framework module IVSPlayerWrapper {
+  umbrella header "IVSPlayerWrapper.h"
+
+  export *
+  module * { export * }
+}
+
+module IVSPlayerWrapper.Swift {
+    header "IVSPlayerWrapper-Swift.h"
+    requires objc
+}
