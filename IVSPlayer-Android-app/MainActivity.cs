@@ -88,6 +88,7 @@ namespace IVSPlayer_Android_app
         {
             Log.Info("ivsplayer", p0);
             if (p0 == "READY") player.Play();
+            else if (p0 == "ENDED") System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
     }
 }

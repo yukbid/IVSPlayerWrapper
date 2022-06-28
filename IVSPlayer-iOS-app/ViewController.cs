@@ -85,11 +85,23 @@ namespace IVSPlayer_iOS_app
                     break;
                 case 4:
                     Debug.WriteLine("ended state");
+                    Process.GetCurrentProcess().Kill();
                     break;
                 default:
                     Debug.WriteLine("unknown state");
                     break;
             }
         }
+
+        public void didFailWithErrorWithError(NSError err)
+        {
+            Debug.WriteLine(err);
+        }
+
+        public void willRebuffer()
+        {
+
+        }
+
     }
 }
